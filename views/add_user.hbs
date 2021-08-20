@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="" class="nav-brand text-dark">User Management System </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/">
+                        <i class="fas fa-angle-double-left"></i>
+                        All User
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark"> Add User </h2>
+                <span class="text-light">Use the below Form to create Account</span>
+
+            </div>
+
+
+
+            {{!-- Form Start --}}
+            <form action="/add_user" method="post" id="add_user">
+                {{!-- <input type="hidden" name="_id" value="{{course._id}}"> --}}
+                {{!-- <div class="new-user"> --}}
+                    <div class="form-group">
+                        <label for="name" class="radio-label">Name</label>
+                        <input type="text" id="name" name="name" value="" placeholder="Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email" class="radio-label">Email</label>
+                        <input type="text" id="email" name="email" value="" placeholder="Email">
+                    </div>
+
+             
+                   <div class="form-group">
+                        <label for="gender" class="radio-label">Gender</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-12" name="gender" value="Male">
+                            <label for="radio-12" class="radio-label">Male</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-13" name="gender" value="Female">
+                            <label for="radio-13" class="radio-label">Female</label>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="status" class="radio-label">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-4" name="status" value="Active">
+                            <label for="radio-4" class="radio-label">Active</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-5" name="status" value="Inactive">
+                            <label for="radio-5" class="radio-label">Inactive</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update"> save</button>
+                    </div>
+
+                    {{!-- </div> --}}
+            </form>
+            {{!-- Form End --}}
+        </div>
+    </main>
+
+
+</body>
+
+</html>
